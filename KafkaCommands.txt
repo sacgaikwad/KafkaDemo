@@ -1,0 +1,7 @@
+﻿docker exec kafka-broker-container kafka-topics --bootstrap-server kafka-broker:9092 --create --topic quickstart
+
+docker exec kafka-broker-container kafka-topics --bootstrap-server kafka-broker:9092 --list
+
+docker exec --interactive --tty kafka-broker-container kafka-console-producer --bootstrap-server kafka-broker:9092 --topic quickstart
+
+docker exec --interactive --tty kafka-broker-container kafka-console-consumer --bootstrap-server kafka-broker:9092 --topic quickstart --from-beginning
